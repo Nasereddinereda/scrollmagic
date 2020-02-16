@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.intro {
+  height: 100vh;
+}
+
+.intro video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.title {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 17px;
+  animation: moveinleft 0.6s ease-out;
+}
+.subtitle {
+  animation: moveinleft 0.9s ease-out;
+}
+
+.text {
+  animation: fadeIn 1.5s ease-out;
+}
+
+.first-h1 {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 17px;
+}
+
+.ppp1{
+  animation: popup 0.5s ease-out;
+}
+.ppp2{
+  animation: popup 0.5s ease-out 0.5s;
+  /* display:none; */
+  animation-fill-mode: backwards;
+}
+.ppp3{
+  animation: popup 0.5s ease-out 0.8s;
+  /* display:none  */
+  animation-fill-mode: backwards;
+  
+}
+
+.movein-right{
+  animation: moveInRight 0.6s ease-out;
+}
+.movein-left{
+  animation: moveInLeft 0.6s ease-out;
+}
+.movein-bottom{
+  animation: moveInBottom 0.8s ease-out 0.3s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveinleft {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  66% {
+    opacity:0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  66%{
+    opacity:0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(300px);
+  }
+  80%{
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes popup{
+  0%{
+    opacity:0;
+    transform: translateY(50px);
+  }
+  80%{
+    opacity:0.5;
+  }
+  100%{
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+/* section {
+  height: 100vh;
+  color: black;
+} */
+
+/* section h1 {
+  padding-top: 300px;
+  text-align: center;
+  font-size: 80px;
+} */
+
+.end {
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  font-size: 80px;
+}
