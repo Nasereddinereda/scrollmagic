@@ -8,6 +8,79 @@ const end = section.querySelector("h1");
 //SCROLLMAGIC
 const controller = new ScrollMagic.Controller();
 
+// Showcase
+let array = [];
+for (i = 0; i < 92; i++) {
+    array[i] = `frame-${i + 1}.png`;
+}
+
+
+
+
+
+var i = -1; // Start point
+var images = array;
+var time = 40;
+
+
+// Change Image
+function changeImgleft() {
+    if (i !== 30 && i !== 60 && i !== 0) {
+        console.log(i);
+
+        if (i > 0) {
+            i--;
+        } else {
+            i = 90;
+        }
+        document.slide.src = `./screens/frame-${i + 1}-min.png`;
+        setTimeout("changeImgleft()", time);
+    }
+}
+
+function changeImgright() {
+    if (i !== 30 && i !== 60 && i !== 90) {
+        console.log(i);
+        document.slide.src = `./screens/frame-${i + 1}-min.png`;
+
+        if (i < images.length - 1) {
+            i++;
+        } else {
+            i = 0;
+        }
+        setTimeout("changeImgright()", time);
+    }
+}
+
+document.getElementById("left").addEventListener("click", function () {
+    i--
+    changeImgleft()
+});
+document.getElementById("right").addEventListener("click", function () {
+    i++
+    changeImgright()
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Scenes
 let scene = new ScrollMagic.Scene({
     duration: 14000,
@@ -36,44 +109,28 @@ setInterval(() => {
 
 
 const onscroll = scroll => {
-    console.log(scroll);
-    if(scroll>0.2){
-        document.getElementById("sec_1").className ="pos_abs top-0 w-full bg-dark-5  h-full tr";
-        document.getElementById("text_1").className ="d-none";
-    }else if(scroll<0.2) {
-        document.getElementById("sec_1").className = "pos_abs top-0 w-full bg-dark-9  h-full tr";
-        document.getElementById("text_1").className = "margin-top-20 text-center ft-60 cl-white d-block";
-    }
-
-    if(scroll>0.8 && scroll < 1.5){
-        document.getElementById("text_2").className="d-block cl-white"
-    }else if (scroll<0.8){
-        document.getElementById("text_2").className = "d-none"
-    } else {
-        document.getElementById("text_2").className = "d-none"
-    }
-
-    if(scroll>=3 && scroll<3.6){
-        document.getElementById("text_3").className = "d-block cl-white"
-    }else {
-        document.getElementById("text_3").className = "d-none"
-    }
-
-    if(scroll>=5.5 && scroll<6.3){
-        document.getElementById("text_4").className = "d-block cl-white"
+    console.log(scroll)
+    if(scroll > 0.2){
+        document.getElementById("text-1").className = "text-center text-muly"
+        document.getElementById("left").className="d-none";
+        document.getElementById("right").className="d-none";
+        document.getElementById("text-1").innerHTML = '<h1 class="text-a br-bt mb-5 mt-100"> CREAVO - FÜR MEHR KREATIVES LICHT</h1><h1 class="text-b">AUF IHREN ARBEITSPLATZ AUSGERICHTET</h1>';
     }else{
-        document.getElementById("text_4").className = "d-none"
-       
-    }
-    if(scroll>6.3&&scroll<8.2){
-        document.getElementById("sec_1").className = "pos_abs top-0 w-full   h-full tr";
-    }else if (scroll>8.2 && scroll<12.3){
-        document.getElementById("sec_1").className = "pos_abs top-0 w-full bg-dark-5  h-full tr";
-    }else if (scroll>12.3){
-        document.getElementById("sec_1").className = "pos_abs top-0 w-full bg-dark-9  h-full tr";
+        document.getElementById("text-1").className = "text-center text-muly"
+        document.getElementById("left").className = "fas fa-chevron-left fa-3x cl-white";
+        document.getElementById("right").className = "fas fa-chevron-right fa-3x cl-white";  
+        document.getElementById("text-1").innerHTML = '<h1 class="text-a br-bt mb-5"> CREAVO - FÜR MEHR KREATIVES LICHT</h1><h1 class="text-b">AUF IHREN ARBEITSPLATZ AUSGERICHTET</h1>';      
     }
 
-    if(scroll>14.3){
-        document.getElementById("sec_1").className = "pos_abs top-0 w-full bg-dark  h-full tr"; 
+    if(scroll>0.6){
+        document.getElementById("text-1").className = "d-none"
+        document.getElementById("img").className = "d-none"
+        document.getElementById("icon").className = "d-none"
+        document.getElementById("video-1").className = "";
+    }else{
+        document.getElementById("video-1").className = "d-none";
+        document.getElementById("img").className = ""
+        document.getElementById("icon").className = "fas fa-chevron-down fa-2x"
     }
+   
 }

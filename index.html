@@ -5,96 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/utils.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli&display=swap"
+      rel="stylesheet"
+    />
     <title>Scroll magic animation</title>
   </head>
   <body>
     <div class="intro">
-      <video src="./video/02_KeyVisual_Creavo.mp4"></video>
-      <section class="pos_abs top-0 w-full bg-dark-9  h-full" id="sec_1">
-        <h1 class="margin-top-20 text-center  first-h1" id="text_1">
-          HELLO WORLD !
-        </h1>
+      <video
+        src="./video/02_KeyVisual_Creavo.mp4"
+        class="d-none"
+        id="video-1"
+      ></video>
+      <div id="sec">
+        <img
+          id="img"
+          name="slide"
+          src="./screens/frame-1-min.png"
+          style="height: 100vh; width: 100%;"
+        />
+      </div>
 
-        <!-- SECOND SECTION -->
-        <div class="d-none" id="text_2">
-          <div class="flex-center margin-top-20">
-            <div class="containt">
-              <h1 class="title ft-40">
-                Title Lorem ipsum
-              </h1>
-              <h4 class="text-center subtitle">Lorem, ipsum dolor.</h4>
-              <div class="w-60 mt-20">
-                <div class="ft-20 text">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Saepe perspiciatis facilis illum modi voluptates mollitia
-                  beatae tempore dolorum qui corporis quisquam pariatur iusto!
-                </div>
-                <div class="ft-20 mt-10 text">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Saepe perspiciatis facilis illum modi voluptates mollitia
-                  beatae tempore dolorum quisquam
-                </div>
+      <!-- SECTION  -->
+      <section class="w-full h-full top-0 pos_abs" id="sec_1">
+        <sec id="sec1">
+          <div class="flex-col col-between h-full">
+            <div class="top"></div>
+            <div class="midlle flex justify-between p-40">
+              <div>
+                <i class="fas fa-chevron-left fa-3x cl-white" id="left"></i>
+              </div>
+              <div class="text-center text-muly" id="text-1">
+                <h1 class="text-a br-bt mb-5">
+                  CREAVO - FÜR MEHR KREATIVES LICHT
+                </h1>
+                <h1 class="text-b">AUF IHREN ARBEITSPLATZ AUSGERICHTET</h1>
+              </div>
+              <div>
+                <i class="fas fa-chevron-right fa-3x cl-white" id="right"></i>
+              </div>
+            </div>
+            <div class="foot flex-center">
+              <div class="flex-col cl-white">
+                <i class="fas fa-chevron-down fa-2x" id="icon"></i>
               </div>
             </div>
           </div>
-        </div>
-
-        <!-- Section 3 -->
-        <div class="d-none third-section" id="text_3">
-          <div class="flex-center margin-top-5 ">
-            <div class="containt-60 flex justify-between h-80 ft-15 ">
-              <div class="flex-col h-100">
-                <p class="ppp1">Lorem ipsum dolor sit.</p>
-                <p class="ppp2">Lorem ipsum dolor sit.</p>
-                <p class="ppp3">Lorem ipsum dolor sit.</p>
-              </div>
-              <div class="flex-col h-100">
-                <p class="ppp1">Lorem ipsum dolor sit.</p>
-                <p class="ppp2">Lorem ipsum dolor sit.</p>
-                <p class="ppp3">Lorem ipsum dolor sit.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Section 4 -->
-        <div class="d-none" id="text_4">
-          <div class="flex-center">
-            <div class="containt flex justify-between mt-50">
-              <div class="w-30">
-                <h3 class="ft-30">Lorem ipsum.</h3>
-                <p class="mt-10 movein-left">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
-                  vitae necessitatibus non saepe harum suscipit autem quaerat
-                  sed, tempore debitis?
-                </pcl>
-              </div>
-              <div class="w-30 movein-bottom">
-                <h3 class="ft-30">Lorem ipsum.</h3>
-                <p class="mt-10">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
-                  vitae necessitatibus non saepe harum suscipit autem quaerat
-                  sed, tempore debitis?
-                </p>
-              </div>
-              <div class="w-30 movein-right">
-                <h3 class="ft-30">Lorem ipsum</h3>
-                <p class="mt-10">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
-                  vitae necessitatibus non saepe harum suscipit autem quaerat
-                  sed, tempore debitis?
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        </sec>
       </section>
+    </div>
+    <!-- LOGO FIXED  -->
+    <div class="logo">
+      <img src="./img/GDA20_HO_WINNER_NG.png" />
     </div>
 
     <!-- Footer -->
-    <section class="end">
+    <!-- <section class="end">
       <h1>END .</h1>
-    </section>
+    </section> -->
 
     <!-- Java script  -->
     <script
